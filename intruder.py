@@ -17,11 +17,11 @@ async def intruder(semaphore, uname, upasswd):
     # 链接地址，选择其中的用户名和密码（get型，post型添加data数据即可）
     url = "".format(str(uname.strip()), str(upasswd.strip()))
     async with semaphore:
-        print(123)
+        #print(123)
         try:
             async with aiohttp.ClientSession() as session:
-                print(456)
-                time.sleep(0.2)
+                #print(456)
+                #time.sleep(0.2)
                 print('[*] 正在爆破%s->%s' % (uname, upasswd))
                 async with session.get(url, headers=header.randUserAgent(), allow_redirects=False) as res:
                     #print('[*] 正在爆破%s->%s' % (uname, upasswd))
