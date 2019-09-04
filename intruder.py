@@ -36,12 +36,12 @@ async def intruder(semaphore, uname, upasswd):
 
 async def hanziRun():
     semaphore = asyncio.Semaphore(THREAD)
-    login = [ intruder(uname=str(uname.strip()), upasswd=str(upasswd.strip()), semaphore=semaphore) for uname in hanzi_name_dict for upasswd in weak_password_dict ]
+    login = [ intruder(uname=str(uname.strip()), upasswd=str(upasswd.strip()), semaphore=semaphore) for upasswd in weak_password_dict for uname in hanzi_name_dict ]
     await asyncio.wait(login)
 
 async def pinyinRun():
     semaphore = asyncio.Semaphore(THREAD)
-    login = [ intruder(uname=str(uname.strip()), upasswd=str(upasswd.strip()), semaphore=semaphore) for uname in pinyin_name_dict for upasswd in weak_password_dict ]
+    login = [ intruder(uname=str(uname.strip()), upasswd=str(upasswd.strip()), semaphore=semaphore) for upasswd in weak_password_dict for uname in pinyin_name_dict ]
     await asyncio.wait(login)
 
 
