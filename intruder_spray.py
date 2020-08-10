@@ -47,7 +47,7 @@ def intruder(domain, user, passwd, semaphore, send_type, info):
 
 if __name__ == '__main__':
     use = '''\033[35m
-get密码爆破：     python3 intruder_spray.py -d http://xxx.com/ -u admin
+get请求密码爆破：     python3 intruder_spray.py -d http://xxx.com/ -u admin
 get请求密码喷洒：  python3 intruder_spray.py -d http://xxx.com/ -c spray -p 123456
 post请求密码爆破： python3 intruder_spray.py -d http://xxx.com/ -u admin -s post
 post请求密码喷洒： python3 intruder_spray.py -d http://xxx.com/ -c spray -p 123456 -s post
